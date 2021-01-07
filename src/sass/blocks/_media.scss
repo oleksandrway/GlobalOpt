@@ -1,0 +1,342 @@
+@media (max-width:1200px){
+    .container{
+        max-width: 960px;
+    }
+
+    .header{
+        position: relative;
+        padding: 0 40px;
+        
+        .menu{
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: -100%;
+            width: 40vw;
+            height: 100vh;
+            padding: 20px 15px;
+            background-color: rgba(46, 46, 46, 0.95);
+            transition: 0.9s;
+            z-index: 20;
+            &__item{
+                border: none;
+                margin: 15px 0;
+                a{
+                    font-size: 25px;
+                }
+            }
+        }
+
+        .menu_active {
+            left: 0;
+        }
+        .hamburger{
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            width: 26px;
+            height: 12px;
+            span{
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-color: #fff;
+                margin-bottom: 2px;
+                transition: 0.5s;
+            }
+        
+        }
+
+        .hamburger_active{
+            span:nth-child(1) {
+                transform: translateY(5px) rotate(-45deg);
+            }
+
+            span:nth-child(2) {
+                display: none;
+            }
+
+            span:nth-child(3) {
+                transform: translateY(1px) rotate(45deg);
+            }
+        }
+    }
+
+    .promo{
+
+        &__descr{
+            font-size: 22px;
+            margin-top: 35px;
+        }
+        &__title{
+            font-size: 50px;
+            margin-top: 15px;
+        }
+
+        &__subtitle{
+            font-size: 30px;
+        }
+        .line{
+            &::before{
+                width: 310px;    
+            }
+            &::after{
+               width: 310px;            
+            }
+        }
+
+        &__icons{
+            flex-wrap: wrap;
+            padding: 0 130px;
+
+        }
+       
+    }
+
+    .benefits{
+        &__item{
+            width: 450px;
+        }
+    }
+
+    .work{
+        &__item{
+            width: 300px;
+        }
+    }
+
+}
+
+
+@media (max-width:992px){
+    .container{
+        max-width: 720px;
+    }
+    .promo{
+        &__icons{
+            padding: 0;
+        }
+        &__icon{
+            margin-top: 10px;
+        }
+    }
+
+    .benefits{
+        &__item{
+            width: 350px;
+        }
+       
+    }
+
+    .work{
+        &__wrapper{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item{
+            
+            width: 350px;
+        }
+    
+    }
+
+    .questions{
+        &__block{
+            width:95%;
+        }
+
+        &__form{
+            input{
+                width: 167px;
+            }
+        }
+    }
+    .reviews{
+        .slick-list{
+            width: 65%;
+            margin: 0 auto;
+        }
+    }
+
+
+}
+
+@media (max-width:768px){
+    .container{
+        max-width: 540px;
+    }
+
+    .title{
+        font-size: 23px;
+    }
+
+    .subtitle{
+        font-size: 16px;
+    }
+
+    .header{
+        &__questions{
+            a{
+                font-size: 16px;
+            }
+        }
+
+        .menu{
+            width: 50%;
+        }
+    }
+
+    
+
+    .promo{
+
+        &__descr{
+            font-size: 16px;
+        }
+
+        &__title{
+             font-size: 36px;
+        }
+
+        &__subtitle{
+            font-size: 19px;
+        }
+
+
+
+        .line{
+            &::before{
+                width: 200px;    
+            }
+            &::after{
+               width: 200px;            
+            }
+        }
+    }
+
+    .benefits{
+        &__item{
+            width: 500px;
+        }
+    }
+
+    .questions{
+        &__form{
+            flex-direction: column;
+            align-items: center;
+
+            input{
+                width: 240px;
+            }
+
+            textarea{
+                width: 240px;
+                border-radius: 18px;
+            }
+        }
+
+    }
+}
+
+@media (max-width:576px){
+    .container{
+        max-width: 90%;
+        padding: 0 10px;
+    }
+    .header{
+        padding: 0;
+        flex-direction: column;
+        &__questions{
+            text-align: center;
+            flex-direction: column;
+            margin-top: 15px;
+        }
+
+        &__btn{
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+
+        .menu{
+            width: 240px;
+        }
+
+        .hamburger{
+            right: 0;
+        }
+
+
+    }
+
+    .promo{
+
+        &__title{
+            font-size: 30px;
+        }
+        .line{
+            &::before{
+                width: 90px;    
+            }
+            &::after{
+               width: 90px;            
+            }
+        }
+
+        
+    }
+
+    .benefits{
+        &__item{
+            width: 100%;
+            flex-direction: column;
+        }
+        &-title{
+            text-align: center;
+        }
+        &__img{
+            margin: 0 auto;
+        }
+    }
+
+    .work{
+
+        
+        &__item{
+            width: 300px;
+        }
+    }
+
+    .agent{
+        .subtitle{
+            text-align: justify;
+        }
+    }
+    
+    .manager{
+        .subtitle{
+            text-align: justify;
+        }
+    }
+
+    .questions{
+        &__form{
+            padding: 10px 0 25px 0;
+            input{
+                width: 220px;
+            }
+
+            textarea{
+                width: 220px;
+            }
+        }
+    }
+
+    .reviews{
+        .slick-list{
+            width: auto;
+        }
+    }
+}

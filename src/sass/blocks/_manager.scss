@@ -1,0 +1,45 @@
+.manager{
+    .container{
+        position: relative;
+        z-index: 3;
+    }
+    padding: 50px 0;
+    background: url(../img/bg_manager.jpg) no-repeat 50%/cover;
+    position: relative;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .3;
+        background: url(../img/bg_agent-2.jpg) no-repeat 50%/cover;
+        z-index: 1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(65, 65, 65, .2) ;
+        z-index: 2;
+    }
+
+
+
+
+
+    &__img{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .title, .subtitle{
+        color: #fff;
+    }
+    
+}
