@@ -19,7 +19,8 @@
 
 		&.slick-current {
 			opacity: 1;
-			transform: scale(1);
+      transform: scale(1);
+      transition-duration:  .9s;
 		}
 
 		img {
@@ -45,10 +46,17 @@
 	}
 }
 
-
+/* from another example */
 .slick-track {
 	display: flex;
 }
+
+
+git config --global user.email "sashakryvoruchko11@gmail.com"
+git config --global user.name "Oleksandr"
+
+
+
 
 /* щоб було кілька блоків  */
 .slick-list {
