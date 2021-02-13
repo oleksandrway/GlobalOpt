@@ -25,9 +25,11 @@
 
 		img {
 			margin: 0 auto;
-			display: block;
+      display: block;
+      border-radius:100%;
 			width: 115px;
-			height: 115px;
+      height: 115px;
+      object-fit: cover;
 		}
 	}
 
@@ -50,10 +52,6 @@
 .slick-track {
 	display: flex;
 }
-
-
-git config --global user.email "sashakryvoruchko11@gmail.com"
-git config --global user.name "Oleksandr"
 
 
 

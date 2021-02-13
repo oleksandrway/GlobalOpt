@@ -2,19 +2,47 @@ window.addEventListener('DOMContentLoaded', () => {
   const menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu__item'),
     hamburger = document.querySelector('.hamburger');
-  hamburger.addEventListener('click', () => {
+
+//menu
+
+  function menuToggle() {
+
     menu.classList.toggle('menu_active');
     hamburger.classList.toggle('hamburger_active');
+  }
+
+  hamburger.addEventListener('click', () => {
+    menuToggle();
+
   });
   menuItem.forEach(item => {
     item.addEventListener('click', () => {
-      menu.classList.toggle('menu_active');
-      hamburger.classList.toggle('hamburger_active');
+      menuToggle();
     });
   });
+
+  document.addEventListener('keydown' , (e) => {
+    if (e.code === "Escape" && menu.classList.contains('menu_active')) {
+      menuToggle();
+    }
+  });
+
+  
+
+  // document.addEventListener('click', e => {
+  //   if (e.target != menu && menu.classList.contains('menu_active') ) {
+  //     menuToggle();
+  //   }
+  // });
+
+
+
+
 });
 
-//modal
+
+// modal 
+const overlay = document.querySelector('.overlay');
 
 $('[data-modal=consultation]').on('click', function () {
   $('.overlay').fadeIn('slow');
@@ -23,15 +51,37 @@ $('[data-modal=consultation]').on('click', function () {
 $('.modal__close').on('click', function () {
   $('.overlay').fadeOut('slow');
 });
+$('.overlay').on('click', function(e) {
+  if(e.target === overlay) {
+    $('.overlay').fadeOut('slow');
+  }
+});
+
+document.addEventListener('keydown' , (e) => {
+  if (e.code === "Escape" ) {
+    $('.overlay').fadeOut('slow');
+  }
+});
 
 
+
+
+
+
+
+
+
+
+
+
+// slider
 $(document).ready(function () {
   $('.reviews__carousel').slick({
     centerMode: true,
     slidesToShow: 3,
     dots: true,
     speed: 900,
-    infinite: true,
+    infinite: false,
     focusOnSelect: true,
     centerPadding: 0,
     responsive: [{
