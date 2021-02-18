@@ -81,19 +81,24 @@ $(document).ready(function () {
     slidesToShow: 3,
     dots: true,
     speed: 900,
-    infinite: false,
+    infinite: true,
     focusOnSelect: true,
     centerPadding: 0,
+    // variableWidth: true,
     responsive: [{
       breakpoint: 992,
       settings: {
         slidesToShow: 1,
         dots: false,
-
       }
     }]
   });
-  /* $('.reviews__carousel').slick('goTo', 1); */
+ 
+
+
+
+
+
 });
 
 
